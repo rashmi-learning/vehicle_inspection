@@ -368,7 +368,7 @@ def non_max_suppression(prediction, conf_thres=0.25, iou_thres=0.45, classes=Non
 @torch.no_grad()
 def detect(opt):
     source, weights, imgsz = opt.source, opt.weights, opt.img_size
-    save_dir = Path('test')
+    save_dir = Path('output')
 
     if os.path.exists(save_dir):
         os.system("rm -rf %s" % save_dir)
@@ -493,10 +493,10 @@ def detect(opt):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', nargs='+', type=str, default='yolov5_dynm_range.tflite', help='model.pt path(s)')
+    parser.add_argument('--weights', type=str, default='best_car_part-fp16.tflite', help='model.pt path(s)')
     parser.add_argument('--source', type=str, default='images', help='source')  # file/folder, 0 for webcam
     parser.add_argument('--img-size', nargs='+', type=int, default=[640, 640], help='image size')  # height, width
-    parser.add_argument('--conf-thres', type=float, default=0.30, help='object confidence threshold')
+    parser.add_argument('--conf-thres', type=float, default=0.40, help='object confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.45, help='IOU threshold for NMS')
     parser.add_argument('--max-det', type=int, default=1000, help='maximum number of detections per image')
     parser.add_argument('--classes', nargs='+', type=int, help='filter by class: --class 0, or --class 0 2 3')
