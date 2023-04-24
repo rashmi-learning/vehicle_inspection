@@ -40,7 +40,14 @@ Clone the Github repository:
 git clone https://github.com/rashmi-learning/vehicle_inspection.git
 cd vehicle_inspection
 ```
-#### Pip
+
+#### Create a virtual environment with conda
+```bash
+conda create -n test_env python=3.8
+conda activate test_env
+
+```
+#### Pip 
 ```bash
 pip install -r requirements.txt
 
