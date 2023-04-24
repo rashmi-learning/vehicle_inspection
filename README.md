@@ -49,6 +49,11 @@ pip install -r requirements.txt
 ```bash
 python test_predict.py --source <input file / input folder> --conf 0.25 --model best_car_part-fp16.tflite
 ```
+Example run:
+```bash
+python test_predict.py --source images/ --model model/best_car_part-fp16.tflite
+```
+
 This will generate a output folder with respect to each classification category and a csv file that lists all the images category along with confidence score.
 
 
