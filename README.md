@@ -2,7 +2,6 @@
 
 
 # vehicle_inspection - Assessment:1
-## Problem Statement: https://drive.google.com/file/d/1-w3I4Yf98f7LJ9Qmg_KRrT2joVHdA_ss/view
 
 ## Description:  
 ### Exercise:1 Real Time Detection
@@ -38,7 +37,7 @@ To get the desired output; these are the following steps:
 Clone the Github repository:
 
 ```bash
-git clone 
+git clone https://github.com/rashmi-learning/vehicle_inspection.git
 cd vehicle_inspection
 ```
 #### Pip
