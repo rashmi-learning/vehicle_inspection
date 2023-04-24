@@ -1,0 +1,199 @@
+# YOLOv5 🚀 by Ultralytics, AGPL-3.0 license
+# COCO128 dataset https://www.kaggle.com/ultralytics/coco128 (first 128 images from COCO train2017) by Ultralytics
+# Example usage: python train.py --data coco128.yaml
+# parent
+# ├── yolov5
+# └── datasets
+#     └── coco128  ← downloads here (7 MB)
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+# path: '/home/rashmi/tmp/Assignment1/train.txt' # dataset root dir
+
+train: '/home/rashmi/tmp/Assignment1/train.txt' # train images (relative to 'path') 128 images
+val: '/home/rashmi/tmp/Assignment1/test.txt'   # val images (relative to 'path') 128 images
+# test:  # test images (optional)
+
+# Classes
+names:
+  0: frontws
+  1: licenseplate
+  2: frontbumpergrille
+  3: lowerbumpergrille
+  4: bonnet
+  5: frontbumper
+  6: rightfoglamp
+  7: rightheadlamp
+  8: alloywheel
+  9: leftfoglamp
+  10: sensor
+  11: tyre
+  12: rightapillar
+  13: rightorvm
+  14: logo
+  15: frontbumpercladding
+  16: rightwa
+  17: towbarcover
+  18: leftheadlamp
+  19: leftorvm
+  20: leftapillar
+  21: leftwa
+  22: leftfender
+  23: leftreardoor
+  24: leftfrontdoor
+  25: doorhandle
+  26: leftbpillar
+  27: leftrunningboard
+  28: leftreardoorglass
+  29: leftfrontdoorglass
+  30: leftcpillar
+  31: leftquarterglass
+  32: leftroofside
+  33: leftqpanel
+  34: rearbumper
+  35: leftdpillar
+  36: indicator
+  37: Reflector
+  38: lefttaillamp
+  39: roofrail
+  40: rearws
+  41: rearbumpercladding
+  42: righttaillamp
+  43: wiper
+  44: tailgate
+  45: namebadge
+  46: antenna
+  47: rightfrontdoorglass
+  48: rightfender
+  49: rightfrontbumper
+  50: rightfrontdoor
+  51: rightrunningboard
+  52: rightroofside
+  53: Roof
+  54: scratch
+  55: rightreardoor
+  56: rightbpillar
+  57: rightreardoorglass
+  58: rightquarterglass
+  59: fuelcap
+  60: rightcpillar
+  61: partial_leftqpanel
+  62: rightqpanel
+  63: rightdpillar
+  64: partial_bonnet
+  65: partial_frontbumper
+  66: partial_leftfender
+  67: partial_leftfrontdoor
+  68: partial_frontws
+  69: partial_tailgate
+  70: partial_rightqpanel
+  71: wheelcap
+  72: rightrearventglass
+  73: rightreardoorcladding
+  74: bumpertear
+  75: d2
+  76: leftfrontdoorcladding
+  77: fadelamp
+  78: leftrearventglass
+  79: clipsbroken
+  80: leftreardoorcladding
+  81: rightfrontdoorcladding
+  82: d3
+  83: wheelrim
+  84: dirt
+  85: rightfendermissing
+  86: partial_rearbumper
+  87: broken
+  88: rightfoglampassemblybroken
+  89: partial_rightfender
+  90: partial_rightfrontdoor
+  91: righttaillampmissing
+  92: d1
+  93: bumpertorn
+  94: bumperdent
+  95: partial_rightreardoor
+  96: partial_rearws
+  97: partial_leftreardoor
+  98: rearbumpermissing
+  99: rim curbrash
+  100: rightfoglampmissing
+  101: footstep
+  102: mtailgate
+  103: towbarcovermissing
+  104: rightbootlamp
+  105: alloy curbrash
+  106: leftbootlamp
+  107: headlightwasher
+  108: leftfrontventglass
+  109: frontbumpergrillemissing
+  110: frontbumpermissing
+  111: leftheadlampmissing
+  112: leftbootlampmissing
+  113: lefttaillampmissing
+  114: doorhandlemissing
+  115: rightbootlampmissing
+  116: sensordamage
+  117: stonechip
+  118: falsealloywheel
+  119: wheelcap curbrash
+  120: rust
+  121: frontbumpercladdingdetached
+  122: indicatormissing
+  123: rightfrontventglass
+  124: tear
+  125: bumperbroken
+  126: reflection
+  127: doorglass
+  128: shattered
+  129: leftfoglampassemblymissing
+  130: headlightwashermissing
+  131: lampdislodged
+  132: lowerbumpergrillebroken
+  133: cracked
+  134: car
+  135: leftrearcladding
+  136: rightorvmbroken
+  137: alloy bent
+  138: frontbumpergrillebroken
+  139: rightreardoorcladdingmissing
+  140: series
+  141: lowerbumpergrillemissing
+  142: leftfoglampmissing
+  143: reflectormissing
+  144: fuelcapmissing
+  145: doorhandlebroken
+  146: leftorvmbroken
+  147: rightcabcorner
+  148: leftcabcorner
+  149: righttailgate
+  150: lefttailgate
+  151: leftreardoorcladdingmissing
+  152: paintedrust
+  153: fade
+  154: wheelcap torn
+  155: wheelcap crack
+  156: sunroof
+  157: rim crack
+  158: rim gouge
+  159: rim bent
+  160: chipped
+  161: rim corrosion
+  162: tyre flat
+  163: Paneldesign
+  164: nameb_audi_a3
+  165: N
+  166: leftfendermissing
+  167: tyre crack
+  168: tyre bulge
+  169: leftfrontbumper
+  170: leftrearbumper
+  171: leftwatorn
+  172: rightwatorn
+  173: leftfoglampassemblybroken
+  174: rightorvmmissing
+  175: rightwadetached
+  176: rightwamissing
+  177: rearwsmissing
+
+  # # Download script/URL (optional)
+  # download: https://ultralytics.com/assets/coco128.zip
