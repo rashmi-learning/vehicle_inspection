@@ -367,6 +367,7 @@ def non_max_suppression(prediction, conf_thres=0.25, iou_thres=0.45, classes=Non
 
 @torch.no_grad()
 def detect(opt):
+    print('check..', opt.weights)
     source, weights, imgsz = opt.source, opt.weights, opt.img_size
     save_dir = Path('output')
 
@@ -375,7 +376,8 @@ def detect(opt):
         os.makedirs(save_dir)
     else:
         os.makedirs(save_dir)
-    weights = weights[0] 
+    # weights = weights[0] 
+    print('cgecj..',weights)
     rearend = 'tflite'
     save_img = True  # save inference images
     stride = None
