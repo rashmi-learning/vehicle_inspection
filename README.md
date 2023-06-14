@@ -1,7 +1,7 @@
 
 
 
-# vehicle_inspection - Assessment:1
+# vehicle_inspection 
 
 ## Description:  
 ### Exercise:1 Real Time Detection
